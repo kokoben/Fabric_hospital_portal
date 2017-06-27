@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import DiaryReducer from './reducer_diary';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+	diary: DiaryReducer
 });
 
 export default rootReducer;
