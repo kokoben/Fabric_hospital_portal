@@ -12,15 +12,15 @@ class Username extends Component{
 	}
 
 	onInputChange(event) {
-		this.setState({term: event.target.value}, function(){
-			this.props.fetchUser(this.state.term)
-		});
+		this.setState({term: event.target.value}, 
+			() => this.props.fetchUser(this.state.term)
+		);
 	}
 
 	render(){
 		return(
 			<div className="username">
-				Username: 
+				<span className="username-field">Username:</span>
 				<input value = {this.state.term}
 			   	onChange={this.onInputChange}	/>
 			</div>

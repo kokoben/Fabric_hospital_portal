@@ -5,17 +5,16 @@ class DiaryList extends Component {
 	renderDiary(diaryData, key=diaryData.dishId /*not sure if which specific field used as key matters..*/) {
 		return (
 			<div key={diaryData.dishId}>
-				<div className="col-sm-4" >
-					<ul>
-						<li><img src={diaryData.imageLink} /></li>
-						<li>Dish Name: {diaryData.dishName}</li>
-						<li>Price :{diaryData.price}</li>
-						<li>Calories: {diaryData.calories}</li>
-						<li>Health Score: {diaryData.healthScoreM}</li>
-						<li>{key}</li>
+				<div className="col-sm-6 col-md-4 col-lg-3" >
+					<ul className="list-group">
+						<li className="list-group-item"><img className="img-thumbnail"src={diaryData.imageLink} /></li>
+						<li className="list-group-item">{diaryData.dishName}</li>
+						<li className="list-group-item">Price :{diaryData.price}</li>
+						<li className="list-group-item">Calories: {diaryData.calories}</li>
+						<li className="list-group-item">Health Score: {diaryData.healthScoreM}</li>
 					</ul>
 				</div>
-				{key % 3 == 2 &&
+				{key % 4 == 3 &&
 					<div className="clearfix"></div> 
 				}
 			</div>
@@ -30,15 +29,12 @@ class DiaryList extends Component {
 				</div>
 			)
 		}
-		else {
-			
-		}
+
 		return (
-			<div>
+			<div className="diary">
 				{this.props.diary.data.map(this.renderDiary)}
 			</div>
 		);
-
 	}
 }
 

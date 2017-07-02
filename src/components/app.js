@@ -6,7 +6,7 @@ export default class App extends Component {
   render() {
     return (
       <div>		  
-		<h1>Diary</h1>
+		<h1 className="text-xs-center">Diary</h1>
 	  	<Username />
 	  	<DiaryList />
 	  </div>

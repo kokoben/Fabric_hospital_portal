@@ -1,3 +1,19 @@
 .username input {
 	width: 75%;
 }
+
+.list-group-item {
+	padding: 3px
+}
+
+.username-field {
+	margin-right: 10px
+}
+
+.diary {
+	margin-top: 10px
+}
+
+span.left {
+	width: 10%
+}
