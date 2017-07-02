@@ -33,6 +33,8 @@
     "promise": "^8.0.0",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
+    "react-easy-chart": "^0.1.13",
+    "react-grid-system": "^2.9.2",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
     "redux": "^3.0.4",

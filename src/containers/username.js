@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import {fetchUser} from '../actions/index';
 
-class Username extends Component{
+class Username extends Component {
 	constructor(props){
 		super(props);
 

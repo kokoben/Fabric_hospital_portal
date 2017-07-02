@@ -5,18 +5,15 @@ class DiaryList extends Component {
 	renderDiary(diaryData, key=diaryData.dishId /*not sure if which specific field used as key matters..*/) {
 		return (
 			<div key={diaryData.dishId}>
-				<div className="col-sm-6 col-md-4 col-lg-3" >
+				<div  className="col-sm-6 col-md-4 col-lg-3" >
 					<ul className="list-group">
-						<li className="list-group-item"><img className="img-thumbnail"src={diaryData.imageLink} /></li>
+						<li className="list-group-item"><img className="img-thumbnail"src={diaryData.imageLink} alt="No image available."/></li>
 						<li className="list-group-item">{diaryData.dishName}</li>
 						<li className="list-group-item">Price :{diaryData.price}</li>
 						<li className="list-group-item">Calories: {diaryData.calories}</li>
 						<li className="list-group-item">Health Score: {diaryData.healthScoreM}</li>
 					</ul>
 				</div>
-				{key % 4 == 3 &&
-					<div className="clearfix"></div> 
-				}
 			</div>
 		)
 	}
