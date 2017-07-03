@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Username from '../containers/username';
 import DiaryList from '../containers/diary_list';
+import DishChart from '../containers/dish_chart';
 
 export default class App extends Component {
   render() {

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import DishChart from './dish_chart';
 
 class DiaryList extends Component {
 	constructor(props) {
@@ -16,7 +17,7 @@ class DiaryList extends Component {
 		window.addEventListener("resize",  this.updateDimensions);
 	}
 	
-	componenetWillUnmount() {
+	componentWillUnmount() {
 		window.removeEventListener("resize", this.updateDimensions);
 	}
 	
@@ -29,11 +30,16 @@ class DiaryList extends Component {
 			<div key={diaryData.dishId}>
 				<div  className="col-sm-6 col-md-4 col-lg-3" >
 					<ul className="list-group">
-						<li className="list-group-item"><img className="img-thumbnail"src={diaryData.imageLink} alt="No image available."/></li>
+						<li className="list-group-item">
+							<img className="img-thumbnail"src={diaryData.imageLink} alt="No image available."/>
+						</li>
 						<li className="list-group-item">{diaryData.dishName}</li>
 						<li className="list-group-item">Price :{diaryData.price}</li>
 						<li className="list-group-item">Calories: {diaryData.calories}</li>
 						<li className="list-group-item">Health Score: {diaryData.healthScoreM}</li>
+						<li className="list-group-item">
+						<DishChart data={diaryData} />
+						</li>
 					</ul>
 				</div>
 				{($(window).width() >= 576 && $(window).width() < 768) &&
