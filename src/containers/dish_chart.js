@@ -2,22 +2,44 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {PieChart, Pie, Sector, Cell } from 'recharts';
 
-class DishChart extends Component {
-	render() {
-		var data = [
-					{name: 'Carbs', value: this.props.data.carbohydrates},
-					{name: 'Protein', value: this.props.data.protein},
-					{name: 'Fat', value: this.props.data.totalFat}
-				];
-		console.log(data);
+const COLORS = ['#0088cc', '#ffcc00', '#e60000'];
+const RADIAN = Math.PI / 180;
 
+class DishChart extends Component {
+	constructor(props) {
+		super(props);
+		this.state = { data: [
+					{name: 'C', value: this.props.data.carbohydrates},
+					{name: 'P', value: this.props.data.protein},
+					{name: 'F', value: this.props.data.totalFat}
+		]};
+
+		this.renderCustomizedLabel = this.renderCustomizedLabel.bind(this);
+
+	}
+	renderCustomizedLabel({cx, cy, midAngle, innerRadius, outerRadius, index}) {
+		const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+		const x = cx + radius * Math.cos(-midAngle * RADIAN);
+		const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+		return (
+			<text x={x} y={y} fill="white" textAnchor={x > cx ? 'start': 'end'} dominantBaseline="central">
+			{this.state.data[index].name}
+			</text>
+		);
+	}
+	render() {
+		console.log(this.state.data[0].name);
 		return (
 			<PieChart width={200} height={250}>
 				<Pie
-					dataKey="macros"
-					data={data}
-					label={true}
+					data={this.state.data}
+					labelLine={false}
+					label={this.renderCustomizedLabel}
 				>
+					{
+						this.state.data.map((entry, index) => <Cell fill={COLORS[index]}/>)
+					}
 				</Pie>
 			</PieChart>
 		);
