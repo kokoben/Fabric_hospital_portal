@@ -14,4 +14,19 @@
 	margin-top: 10px
 }
 
+.carbs {
+	color: #0088cc;
+}
+
+.fat {
+	color: #e60000;
+}
+
+.protein {
+	color: #ffcc00;
+}
+
+.recharts-wrapper {
+	margin: 0 auto;
+}
 

@@ -29,7 +29,6 @@ class DishChart extends Component {
 		);
 	}
 	render() {
-		console.log(this.state.data[0].name);
 		return (
 			<PieChart width={200} height={250}>
 				<Pie

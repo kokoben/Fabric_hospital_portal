@@ -37,12 +37,25 @@ class DiaryList extends Component {
 						<li className="list-group-item">Price :{diaryData.price}</li>
 						<li className="list-group-item">Calories: {diaryData.calories}</li>
 						<li className="list-group-item">Health Score: {diaryData.healthScoreM}</li>
-						<li className="list-group-item">
+						<div className="container-fluid">
+						<li className="list-group-item row">
+							<div className="col-xs-4 carbs">
+								{`${diaryData.carbohydrates}G Carbs`}
+							</div>
+							<div className="col-xs-4 fat">
+								{`${diaryData.totalFat}G Fat`}
+							</div>
+							<div className="col-xs-4 protein">
+								{`${diaryData.protein}G Protein`}
+							</div>
+						</li>
+						</div>
+						<li className="list-group-item recharts-wrapper">
 						<DishChart data={diaryData} />
 						</li>
 					</ul>
 				</div>
-				{($(window).width() >= 576 && $(window).width() < 768) &&
+				{($(window).width() >= 480 && $(window).width() < 768) &&
 					key % 2 == 1 && 
 						<div className="clearfix visible-sm-block"></div>
 				}
