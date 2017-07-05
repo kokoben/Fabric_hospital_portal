@@ -20,7 +20,7 @@ class Username extends Component {
 	render(){
 		return(
 			<div className="username">
-				<span className="username-field">Username:</span>
+				<span className="username-text">Username:</span>
 				<input value = {this.state.term}
 			   	onChange={this.onInputChange}	/>
 			</div>

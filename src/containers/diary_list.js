@@ -34,7 +34,7 @@ class DiaryList extends Component {
 							<img className="img-thumbnail"src={diaryData.imageLink} alt="No image available."/>
 						</li>
 						<li className="list-group-item">{diaryData.dishName}</li>
-						<li className="list-group-item">Price :{diaryData.price}</li>
+						<li className="list-group-item">Price: {diaryData.price}</li>
 						<li className="list-group-item">Calories: {diaryData.calories}</li>
 						<li className="list-group-item">Health Score: {diaryData.healthScoreM}</li>
 						<div className="container-fluid">

@@ -1,12 +1,40 @@
+body {
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.container {
+	max-width: 100%;
+	padding: 0;
+}
+
+.sub-container {
+	max-width: 1080px;
+	padding-left: 5px;
+	padding-right: 5px
+}
+.banner {
+	background-color: #c7c7c7;
+	width: 100%;
+	margin: 0;
+}
+
 .username input {
-	width: 75%;
+	width: 90%;
+}
+
+.username-field {
+	position: sticky;
+	top: 0px;
+	z-index: 1;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 .list-group-item {
 	padding: 3px
 }
 
-.username-field {
+.username-text {
 	margin-right: 10px
 }
 

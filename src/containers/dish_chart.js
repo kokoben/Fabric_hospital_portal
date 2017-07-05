@@ -30,14 +30,14 @@ class DishChart extends Component {
 	}
 	render() {
 		return (
-			<PieChart width={200} height={250}>
+			<PieChart width={200} height={150}>
 				<Pie
 					data={this.state.data}
 					labelLine={false}
 					label={this.renderCustomizedLabel}
 				>
 					{
-						this.state.data.map((entry, index) => <Cell fill={COLORS[index]}/>)
+						this.state.data.map((entry, index) => <Cell key={COLORS[index]} fill={COLORS[index]}/>)
 					}
 				</Pie>
 			</PieChart>
