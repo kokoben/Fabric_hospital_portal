@@ -23,6 +23,10 @@ body {
 	padding: 8px 10px;
 }
 
+.list-group {
+	box-shadow: 1px 1px 5px grey;
+}
+
 .list-group-item {
 	padding: 3px
 }
