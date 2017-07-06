@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {StickyContainer, Sticky} from 'react-sticky';
 import Username from '../containers/username';
 import DiaryList from '../containers/diary_list';
 

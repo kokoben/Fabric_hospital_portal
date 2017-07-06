@@ -9,6 +9,7 @@ class Username extends Component {
 
 		this.state = {term: ''};
 		this.onInputChange = this.onInputChange.bind(this);
+		this.scrollToTop = this.scrollToTop.bind(this);
 	}
 
 	onInputChange(event) {
@@ -17,12 +18,19 @@ class Username extends Component {
 		);
 	}
 
+	scrollToTop() {
+		document.body.scrollTop = 0; // for chrome, safari, and opera.
+		document.documentElement.scrollTop = 0; // for ie and firefox.
+	}
+
 	render(){
 		return(
-			<div className="username">
-				<span className="username-text">Username:</span>
-				<input value = {this.state.term}
-			   	onChange={this.onInputChange}	/>
+			<div className="username input-group">
+				<input className="form-control" placeholder="Username" value = {this.state.term}
+			   	onChange={this.onInputChange} />
+				<span className="input-group-btn">
+					<button onClick={this.scrollToTop} className="btn btn-primary" type="button">Top</button>
+				</span>
 			</div>
 		)	
 	}

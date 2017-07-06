@@ -3,8 +3,7 @@ body {
 }
 
 .container {
-	max-width: 100%;
-	padding: 0;
+	max-width: 100%; padding: 0;
 }
 
 .sub-container {
@@ -14,28 +13,18 @@ body {
 }
 .banner {
 	background-color: #c7c7c7;
-	width: 100%;
 	margin: 0;
-}
-
-.username input {
-	width: 90%;
 }
 
 .username-field {
 	position: sticky;
 	top: 0px;
 	z-index: 1;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding: 8px 10px;
 }
 
 .list-group-item {
 	padding: 3px
-}
-
-.username-text {
-	margin-right: 10px
 }
 
 .diary {
