@@ -17,8 +17,10 @@ body {
 }
 
 .invalid {
-	position: relative;
-	top: 10px;
+	position: fixed;
+	left: 10px;
+	top: 105px;
+	z-index: 2;
 }
 
 .username-field {
