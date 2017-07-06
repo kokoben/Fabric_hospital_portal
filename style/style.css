@@ -16,6 +16,11 @@ body {
 	margin: 0;
 }
 
+.invalid {
+	position: relative;
+	top: 10px;
+}
+
 .username-field {
 	position: sticky;
 	top: 0px;

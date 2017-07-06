@@ -74,7 +74,7 @@ class DiaryList extends Component {
 	render() {
 		if (this.props.diary.data == undefined) {
 			return (
-				<div>
+				<div className="invalid text-xs-center">
 					Please enter a valid username.
 				</div>
 			)
