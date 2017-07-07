@@ -6,3 +6,16 @@ in n out
 
 starbucks
 54e81a3c-c3a1-450d-a4db-033e2a72dcf2
+
+
+- app occasionally carshes when selectin a restaurant. but can't single out the cause.
+- often it's when it's the first restaurant in the list
+- full descriptions don't show up in the dish detail view
+- some dishes still using placeholder image.
+- scoring systm not clear. he thought the star rating system and the health score were different ways for the user to rate the same thing.
+- some dish items seem superfluous, like roasted almonds from cold stone
+- app seems to ignore user's allergen information. he selected his allergens, but dishes that contain the allergen ingredients still populate the results.
+- example: he selected tree nuts as an allergy, but roasted almonds, sliced almodns, and pecans still show up in coldstone.
+- he selected seasame but still got sesame bagel from coffee bean and tea leaf.
+- also ignores food preferences. he selected no chicken, beef, pork, or seafood, but still got back a chicken taco dish from rubios
+- app doesn't save preferences on subsequent logins. have to reenter them.
