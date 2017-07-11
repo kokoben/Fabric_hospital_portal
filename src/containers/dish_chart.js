@@ -5,7 +5,7 @@ import {PieChart, Pie, Sector, Cell } from 'recharts';
 const COLORS = ['#0088cc', '#ffcc00', '#e60000'];
 const RADIAN = Math.PI / 180;
 
-class DishChart extends Component {
+class FoodChart extends Component {
 	constructor(props) {
 		super(props);
 		this.state = { data: [
@@ -51,4 +51,4 @@ function mapStateToProps(state) {
 	};
 }
 
-export default connect(mapStateToProps)(DishChart);
+export default connect(mapStateToProps)(FoodChart);

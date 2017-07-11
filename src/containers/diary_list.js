@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import DishChart from './dish_chart';
+import FoodChart from './dish_chart';
 
 class DiaryList extends Component {
 	constructor(props) {
@@ -28,6 +28,7 @@ class DiaryList extends Component {
 	renderDiary(diaryData, key=diaryData.dishId /*not sure if which specific field used as key matters..*/) {
 		return (
 			<div key={diaryData.dishId}>
+				{/* dish entries.*/}
 				<div  className="col-sm-6 col-md-4 col-lg-3" >
 					<ul className="list-group">
 						<li className="list-group-item">
@@ -51,7 +52,7 @@ class DiaryList extends Component {
 						</li>
 						</div>
 						<li className="list-group-item recharts-wrapper">
-						<DishChart data={diaryData} />
+						<FoodChart data={diaryData} />
 						</li>
 					</ul>
 				</div>
@@ -80,9 +81,20 @@ class DiaryList extends Component {
 			)
 		}
 
+		let placeholderAnal = {'carbohydrates': 42, 'protein': 42, 'totalFat': 42};
 		return (
-			<div className="diary">
-				{this.props.diary.data.map(this.renderDiary)}
+			<div>
+				{/* user's analytics.*/}
+				<div className="analytics text-xs-center">
+					User&apos;s Analytics:
+					<FoodChart data={placeholderAnal}/>
+				</div>
+				<div className="history">
+					<div className="history-header text-xs-center">
+						User&apos;s Dish History
+					</div>
+					{this.props.diary.data.map(this.renderDiary)}
+				</div>
 			</div>
 		);
 	}

@@ -11,6 +11,11 @@ body {
 	padding-left: 5px;
 	padding-right: 5px;
 }
+
+.analytics {
+	position: relative;
+	margin-top: 20px;
+}
 .banner {
 	background-color: #c7c7c7;
 	margin: 0;
@@ -37,9 +42,13 @@ body {
 	padding: 3px
 }
 
-.diary {
+.history {
 	margin-top: 10px
 }
+
+ .history-header {
+	margin-bottom: 20px;	
+ }
 
 .carbs {
 	color: #0088cc;
